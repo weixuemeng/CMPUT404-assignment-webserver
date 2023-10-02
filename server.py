@@ -153,6 +153,7 @@ class MyWebServer(socketserver.BaseRequestHandler):
                     f"{file_contents}"
                 )
                 self.request.sendall(response.encode())
+                file.close()
         except:
             pass
     
@@ -168,6 +169,7 @@ class MyWebServer(socketserver.BaseRequestHandler):
                     f"{file_contents}"
                 )
                 self.request.sendall(response.encode())
+                file.close()
         except:
             pass
 
